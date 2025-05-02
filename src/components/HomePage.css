@@ -1,0 +1,163 @@
+/* HomePage.css */
+
+body, html {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f9f3fd; /* pastel lavender */
+  color: #4a3c4f;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #e6d6f3; /* pastel lavender */
+  color: #4a3c4f;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #6a0572;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-weight: 500;
+  color: #6a0572;
+  transition: color 0.2s ease;
+}
+
+.nav-links li:hover {
+  color: #f67280; /* peachy pink */
+}
+
+.auth-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.auth-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: white;
+  background-color: #ba9edc; /* pastel purple */
+}
+
+.auth-btn:hover {
+  background-color: #a57cca;
+}
+
+.auth-btn.signup {
+  background-color: #f7b2d9; /* pastel pink */
+  color: #6a0572;
+}
+
+.auth-btn.signup:hover {
+  background-color: #ec97c6;
+  color: white;
+}
+
+.auth-btn.logout {
+  background-color: #dba0d4; /* pastel peach-lavender */
+}
+
+.auth-btn.logout:hover {
+  background-color: #c678c3;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  background: #f3d5eb; /* pastel pink-peach */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #6a0572;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li:hover {
+  text-decoration: underline;
+}
+
+.socials {
+  font-weight: 500;
+}
+
+/* Responsive */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6a0572;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .auth-links {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
