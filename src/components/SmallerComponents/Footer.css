@@ -1,12 +1,14 @@
 /* Footer.css */
 
 .footer {
-    background-color: #d6c3f3; /* pastel purple */
-    padding: 2rem 1rem;
-    text-align: center;
-    color: #4b4b4b;
-    font-family: 'Poppins', sans-serif;
-  }
+  background-color: #fbeaff; /* soft pinkish-purple */
+  color: #6a2977;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
   
   .footer-links {
     margin-bottom: 1rem;

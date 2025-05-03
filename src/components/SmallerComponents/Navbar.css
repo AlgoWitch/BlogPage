@@ -1,0 +1,107 @@
+/* Pastel color theme */
+:root {
+  --primary: #d8c4f2; /* pastel purple */
+  --secondary: #f6c0d0; /* pastel pink */
+  --text: #4a4a4a;
+  --white: #fff;
+}
+
+/* Navbar base styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-links li a:hover {
+  color: var(--secondary);
+}
+
+/* Auth buttons (Login/Signup) */
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.login-btn,
+.signup-btn {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.2s ease-in-out;
+}
+
+.login-btn {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.signup-btn {
+  background-color: var(--white);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.signup-btn:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+/* Responsive Design */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: var(--primary);
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .auth-buttons {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

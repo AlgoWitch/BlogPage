@@ -1,19 +1,39 @@
-// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
-import HomePage from './components/HomePage';
-import Login from './components/Login';
-import Signup from './components/Signup';
+import Navbar from './components/SmallerComponents/Navbar';
+import Footer from './components/SmallerComponents/Footer';
+import Login from './components/SmallerComponents/Login';
+import Signup from './components/SmallerComponents/Signup';
+
+import HomePage from './components/Pages/HomePage';
+import Feed from './components/Pages/Feed';
+// import other pages as needed...
+
+// Wrapper to handle conditional layout
+const AppLayout = () => {
+  const location = useLocation();
+  const hideNavbarFooter = location.pathname === '/login' || location.pathname === '/signup';
+
+  return (
+    <>
+      {!hideNavbarFooter && <Navbar />}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/feed" element={<Feed />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        {/* Add more routes as needed */}
+      </Routes>
+      {!hideNavbarFooter && <Footer />}
+    </>
+  );
+};
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-      </Routes>
+      <AppLayout />
     </Router>
   );
 }
