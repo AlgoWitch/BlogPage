@@ -1,0 +1,113 @@
+/* src/components/Navbar.css */
+
+:root {
+    --primary: #d6c3f3; /* pastel purple */
+    --secondary: #f9c4d2; /* soft pink */
+    --text-dark: #4b4b4b;
+    --white: #ffffff;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .navbar {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6c4fa3;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #4b4b4b;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #6c4fa3;
+  }
+  
+  /* Auth Buttons */
+  .auth-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .auth-buttons button {
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .login-btn {
+    background-color: var(--white);
+    color: #6c4fa3;
+    border: 2px solid #6c4fa3;
+  }
+  
+  .signup-btn {
+    background-color: var(--secondary);
+    color: #fff;
+    border: 2px solid var(--secondary);
+  }
+  
+  .login-btn:hover,
+  .signup-btn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Hamburger Menu */
+  .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links,
+    .auth-buttons {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      background-color: var(--primary);
+      padding: 1rem 0;
+    }
+  
+    .nav-links.active,
+    .auth-buttons.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+      color: #4b4b4b;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
