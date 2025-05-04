@@ -1,107 +1,114 @@
-/* Pastel color theme */
-:root {
-  --primary: #d8c4f2; /* pastel purple */
-  --secondary: #f6c0d0; /* pastel pink */
-  --text: #4a4a4a;
-  --white: #fff;
-}
-
-/* Navbar base styling */
+/* Navbar Container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--primary);
+  background-color: #e6e6fa; /* pastel lavender */
   padding: 1rem 2rem;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
-  z-index: 100;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-.navbar-logo a {
+/* Logo */
+.navbar-logo {
   font-size: 1.8rem;
   font-weight: bold;
-  color: var(--text);
+  color: #7b2cbf;
+  font-family: 'Segoe UI', sans-serif;
   text-decoration: none;
 }
 
+/* Navigation links container */
 .navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.navbar-links li a {
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.navbar-links li a:hover {
-  color: var(--secondary);
-}
-
-/* Auth buttons (Login/Signup) */
-.auth-buttons {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.login-btn,
-.signup-btn {
+/* Individual nav link */
+.nav-link {
   text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 8px;
+  color: #4b106e;
   font-weight: 500;
-  transition: 0.2s ease-in-out;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  transition: color 0.3s;
 }
 
-.login-btn {
-  background-color: var(--secondary);
-  color: var(--text);
+.nav-link:hover {
+  color: #c77dff;
 }
 
-.signup-btn {
-  background-color: var(--white);
-  color: var(--primary);
-  border: 2px solid var(--primary);
+/* Active link style */
+.nav-link.active {
+  color: #fff;
+  background-color: #cba0f5;
+  border-radius: 12px;
 }
 
-.signup-btn:hover {
-  background-color: var(--secondary);
-  color: var(--white);
+/* Auth section: Login / Signup */
+.navbar-auth {
+  display: flex;
+  gap: 0.8rem;
 }
 
-/* Responsive Design */
-.menu-icon {
+/* Cute Login and Signup Buttons */
+.navbar-auth .nav-link {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  background-color: #f7c8e0; /* pastel pink */
+  color: #4b106e;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+  border: none;
+}
+
+.navbar-auth .nav-link:hover {
+  background-color: #fce7f3; /* lighter pink */
+  transform: scale(1.05);
+  color: #7b2cbf;
+}
+
+.navbar-auth .nav-link.active {
+  background-color: #e0b0ff; /* pastel lavender when active */
+  color: #fff;
+}
+
+/* Hamburger Menu for small screens */
+.navbar-toggle {
   display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #7b2cbf;
 }
 
 @media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .navbar-links {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: var(--primary);
     width: 100%;
-    padding: 1rem 2rem;
+    margin-top: 1rem;
   }
 
   .navbar-links.active {
     display: flex;
   }
 
-  .auth-buttons {
-    display: none;
+  .navbar-auth {
+    margin-top: 1rem;
   }
 
-  .menu-icon {
+  .navbar-toggle {
     display: block;
+    align-self: flex-end;
   }
 }
