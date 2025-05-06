@@ -1,83 +1,66 @@
+/* HomePage.css */
 
-
+/* Global Styles */
 body {
-font-family: 'Poppins', sans-serif;
-background-color: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f7f7;
 }
 
+/* Hero Section */
 .hero-section {
-background-color: #f2e6ff; 
-color: #4b007d;
-padding: 4rem 2rem;
-text-align: center;
+  background-color: #f2e6ff;
+  color: #4b007d;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
 .hero-section h1 {
-font-size: 2.5rem;
-color: #6c4fa3;
+  font-size: 2.5rem;
+  color: #6c4fa3;
 }
 
 .hero-section p {
-font-size: 1.2rem;
-color: #4b4b4b;
-margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #4b4b4b;
+  margin-top: 1rem;
 }
 
 .hero-section button {
-background-color: #f9c4d2; 
-color:white;
-padding: 0.8rem 1.5rem;
-margin: 1rem;
-border: none;
-border-radius: 25px;
-font-size: 1rem;
-cursor: pointer;
+  background-color: #f9c4d2;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  margin: 1rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.hero-section button\:hover {
-background-color: #dc7d9c;
+.hero-section button:hover {
+  background-color: #dc7d9c;
 }
 
-/* /\* Main Feed \*/ 
+/* Main Feed */
 .main-feed {
-padding: 2rem;
-background-color: #ffffff;
+  padding: 2rem;
+  background-color: #ffffff;
 }
 
 .main-feed h2 {
-text-align: center;
-font-size: 2rem;
-color: #6c4fa3;
+  text-align: center;
+  font-size: 2rem;
+  color: #6c4fa3;
 }
 
-
-
-
-
-/* Feed Scroll Container */
+/* Post List Grid */
 .post-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* exactly 3 per row */
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   margin-top: 2rem;
-  max-height: 65vh;
-  overflow-y: auto;
-  padding-right: 0.5rem;
 }
 
-/* Custom scrollbar (optional but pretty) */
-.post-list::-webkit-scrollbar {
-  width: 8px;
-}
-.post-list::-webkit-scrollbar-thumb {
-  background-color: #c2a5d3;
-  border-radius: 10px;
-}
-.post-list::-webkit-scrollbar-track {
-  background: #f0f0f0;
-}
-
-/* Post Card Styles */
+/* Post Card */
 .home-post-card {
   background-color: #faf5ff;
   border: 1px solid #e2d8f3;
@@ -125,4 +108,30 @@ color: #6c4fa3;
   font-size: 0.75rem;
   padding: 0.3rem 0.6rem;
   border-radius: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .post-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .post-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .hero-section button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
 }
