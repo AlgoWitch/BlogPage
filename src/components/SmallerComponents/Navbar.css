@@ -77,34 +77,34 @@
   color: #fff;
 }
 
-/* Hamburger Menu for small screens */
+/* Hamburger Menu Button */
 .navbar-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 1.5rem;
   color: #7b2cbf;
+  cursor: pointer;
 }
 
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .navbar-links {
+  .navbar-links,
+  .navbar-auth {
     display: none;
     flex-direction: column;
     width: 100%;
     margin-top: 1rem;
   }
 
-  .navbar-links.active {
+  .navbar-links.active,
+  .navbar-auth.active {
     display: flex;
-  }
-
-  .navbar-auth {
-    margin-top: 1rem;
   }
 
   .navbar-toggle {

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import './Feed.css';
 
 const tags = [
-  '#Life', '#College', '#MentalHealth', '#Productivity', '#Friendship',
-  '#Love', '#Stress', '#Success', '#Failure', '#DailyThoughts', '#Gratitude', '#Growth'
+  'Life', 'College', 'MentalHealth', 'Productivity', 'Friendship',
+  'Love', 'Stress', 'Success', 'Failure', 'DailyThoughts', 'Gratitude', 'Growth'
 ];
 
 const posts = [
@@ -133,7 +133,7 @@ const Feed = () => {
         </div>
 
         <div className="main-feed-wrapper">
-          <h3>✨ Explore Real Stories & Shared Journeys</h3>
+          <h3>Explore Real Stories & Shared Journeys</h3>
           <div className="post-grid">
             {posts.map((post) => (
               <Link to={`/post/${post.id}`} className="post-card" key={post.id}>
