@@ -95,12 +95,20 @@ body {
   color: #7a7a7a;
   margin-bottom: 0.5rem;
 }
+.home-author {
+  margin-top: 1rem;
+  margin-bottom: 1rem ;
+  font-size: 0.85rem;
+  color: #7a7a7a;
+  font-style: italic;
+}
 
 .home-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
 }
+
 
 .tag {
   background-color: #decdf2;

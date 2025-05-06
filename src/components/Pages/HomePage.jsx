@@ -1,4 +1,3 @@
-// src/components/HomePage.jsx
 import React, { useEffect, useState } from 'react';
 import userData from '../../data/userData.json'; // adjust path if needed
 import './HomePage.css';
@@ -7,7 +6,7 @@ function HomePage() {
   const [posts, setPosts] = useState([]);
   
   // Simulated login state — replace with real auth logic later
-  const isLoggedIn = true;
+  const isLoggedIn = false;
 
   // Dummy posts for first-time visitors
   const randomGuestPosts = [
@@ -17,7 +16,8 @@ function HomePage() {
       content: "Discover voices from all corners of campus.",
       likes: 12,
       createdAt: "2025-04-28T10:00:00Z",
-      tags: ["introduction", "community"]
+      tags: ["introduction", "community"],
+      author: "John Doe"
     },
     {
       id: 2,
@@ -25,7 +25,8 @@ function HomePage() {
       content: "A few minutes of reflection can change your day.",
       likes: 20,
       createdAt: "2025-04-29T14:45:00Z",
-      tags: ["mental health", "writing"]
+      tags: ["mental health", "writing"],
+      author: "Jane Smith"
     },
     {
       id: 3,
@@ -33,7 +34,8 @@ function HomePage() {
       content: "Quick tips to survive and thrive in your first year.",
       likes: 33,
       createdAt: "2025-05-01T09:20:00Z",
-      tags: ["college", "advice"]
+      tags: ["college", "advice"],
+      author: "Alex Brown"
     },
     {
       id: 4,
@@ -41,7 +43,8 @@ function HomePage() {
       content: "Lofi, classical, or ambient? Here's what helps most.",
       likes: 18,
       createdAt: "2025-04-25T11:00:00Z",
-      tags: ["study", "music"]
+      tags: ["study", "music"],
+      author: "Maria Green"
     },
     {
       id: 5,
@@ -49,7 +52,8 @@ function HomePage() {
       content: "It’s hard but worth it. Start with a smile!",
       likes: 27,
       createdAt: "2025-04-26T13:30:00Z",
-      tags: ["college", "social"]
+      tags: ["college", "social"],
+      author: "Emily Davis"
     },
     {
       id: 6,
@@ -57,7 +61,8 @@ function HomePage() {
       content: "My top 3 hangout and caffeine refuel spots!",
       likes: 16,
       createdAt: "2025-04-27T08:15:00Z",
-      tags: ["campus", "food"]
+      tags: ["campus", "food"],
+      author: "Michael Johnson"
     },
     {
       id: 7,
@@ -65,7 +70,8 @@ function HomePage() {
       content: "Tips that helped me adjust during my first semester.",
       likes: 14,
       createdAt: "2025-04-23T10:00:00Z",
-      tags: ["mental health", "college"]
+      tags: ["mental health", "college"],
+      author: "Sophie Lee"
     },
     {
       id: 8,
@@ -73,7 +79,8 @@ function HomePage() {
       content: "Here's how I save money and track my expenses.",
       likes: 22,
       createdAt: "2025-04-20T16:30:00Z",
-      tags: ["finance", "student life"]
+      tags: ["finance", "student life"],
+      author: "Daniel Kim"
     },
     {
       id: 9,
@@ -81,7 +88,8 @@ function HomePage() {
       content: "Small habits that set the tone for my day.",
       likes: 19,
       createdAt: "2025-04-19T07:00:00Z",
-      tags: ["habits", "productivity"]
+      tags: ["habits", "productivity"],
+      author: "Olivia Martinez"
     },
     {
       id: 10,
@@ -89,7 +97,8 @@ function HomePage() {
       content: "Breathing exercises and study plans that help.",
       likes: 25,
       createdAt: "2025-04-18T13:15:00Z",
-      tags: ["exams", "wellbeing"]
+      tags: ["exams", "wellbeing"],
+      author: "Jack Wilson"
     },
     {
       id: 11,
@@ -97,7 +106,8 @@ function HomePage() {
       content: "Tried all 5 — here’s what I think!",
       likes: 11,
       createdAt: "2025-04-17T22:00:00Z",
-      tags: ["food", "campus"]
+      tags: ["food", "campus"],
+      author: "Zoe White"
     },
     {
       id: 12,
@@ -105,7 +115,8 @@ function HomePage() {
       content: "Pomodoro, active recall, spaced repetition — explained.",
       likes: 30,
       createdAt: "2025-04-15T12:00:00Z",
-      tags: ["study", "tips"]
+      tags: ["study", "tips"],
+      author: "Ethan Scott"
     },
     {
       id: 13,
@@ -113,7 +124,8 @@ function HomePage() {
       content: "Thrift finds and DIY projects to make your dorm cozy.",
       likes: 17,
       createdAt: "2025-04-14T09:30:00Z",
-      tags: ["dorm", "lifestyle"]
+      tags: ["dorm", "lifestyle"],
+      author: "Lily Adams"
     },
     {
       id: 14,
@@ -121,7 +133,8 @@ function HomePage() {
       content: "Giving back gave me new perspective and friendships.",
       likes: 21,
       createdAt: "2025-04-13T11:45:00Z",
-      tags: ["volunteering", "growth"]
+      tags: ["volunteering", "growth"],
+      author: "Tom Carter"
     },
     {
       id: 15,
@@ -129,7 +142,8 @@ function HomePage() {
       content: "From fiction to productivity must-reads — check these out.",
       likes: 28,
       createdAt: "2025-04-12T10:20:00Z",
-      tags: ["books", "recommendations"]
+      tags: ["books", "recommendations"],
+      author: "Sophia Wilson"
     },
     {
       id: 16,
@@ -137,10 +151,11 @@ function HomePage() {
       content: "Visual planning and why it helps my ADHD brain.",
       likes: 24,
       createdAt: "2025-04-10T08:00:00Z",
-      tags: ["organization", "journaling"]
+      tags: ["organization", "journaling"],
+      author: "Grace Lee"
     }
   ];
-  
+  ;
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -178,11 +193,16 @@ function HomePage() {
                 <span>{new Date(post.createdAt).toLocaleDateString()}</span>
                 <span>❤️ {post.likes}</span>
               </div>
+              <div className="home-author">
+                <span>{post.author}</span>
+              </div>
+
               <div className="home-tags">
                 {post.tags?.map((tag, idx) => (
-                  <span key={idx} className="tag">#{tag}</span>
+                  <span key={idx} className="tag">{tag}</span>
                 ))}
               </div>
+            
             </div>
           ))}
         </div>
