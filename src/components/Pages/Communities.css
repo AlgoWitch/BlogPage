@@ -1,0 +1,211 @@
+/* src/components/Pages/Communities.css */
+
+.communities-page {
+  padding: 2rem;
+  background-color: #fef7ff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.community-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.community-header h1 {
+  font-size: 2.2rem;
+  color: #6b4c9a;
+}
+
+.community-header p {
+  color: #666;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.community-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.community-controls input {
+  padding: 0.6rem 1rem;
+  width: 240px;
+  border: 1px solid #d8c9f1;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.community-controls button {
+  background-color: #f9c4d2;
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.community-controls button:hover {
+  background-color: #b982e8;
+}
+
+.tag-filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.tag-btn {
+  background-color: #f2e5ff;
+  border: none;
+  border-radius: 15px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  color: #6f42c1;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.tag-btn:hover,
+.tag-btn.active {
+  background-color: #c9a0ff;
+  color: white;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+  flex-wrap: wrap;
+}
+
+.tab-buttons button {
+  background-color: #eee2f8;
+  color: #5b378b;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.tab-buttons .active {
+  background-color: #c9a0ff;
+  color: white;
+}
+
+.tab-buttons button:hover {
+  background-color: #d8b4ff;
+}
+
+.community-list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 1rem;
+  }
+
+.community-card {
+  background-color: #fff0fa;
+  border: 2px dashed #dda6ff;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(165, 125, 225, 0.15);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.community-card:hover {
+  transform: translateY(-3px);
+}
+
+.community-card h3 {
+  margin: 0 0 0.5rem;
+  color: #703e9e;
+}
+
+.community-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.card-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
+.card-tag {
+  background-color: #ecdfff;
+  color: #703e9e;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.card-tag:hover {
+  background-color: #cba8f0;
+  color: white;
+}
+
+.visit-btn {
+  background-color: #bc84ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: flex-start;
+}
+
+.visit-btn:hover {
+  background-color: #a065db;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .community-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .community-controls input {
+    width: 90%;
+  }
+
+  .community-controls button {
+    width: 90%;
+  }
+
+  .tag-filters {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 900px) {
+    .community-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .community-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  

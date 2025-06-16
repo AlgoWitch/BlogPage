@@ -1,181 +1,193 @@
 {
-    "id": 1,
-    "name": "John Doe",
-    "profilePic": "https://via.placeholder.com/150",
-    "bio": "A passionate writer and thinker.",
-    "postsCount": 12,
-    "likesReceived": 87,
-    "followersCount": 45,
-    "followingCount": 18,
-    "joinedCommunities": 5,
-    "bookmarkedPosts": 7,
-  
-    "posts": [
-      {
-        "id": 101,
-        "title": "My First Day in College",
-        "content": "It was a whirlwind of emotions...",
-        "likes": 23,
-        "createdAt": "2025-05-01T14:30:00Z",
-        "tags": ["college", "life"]
-      },
-      {
-        "id": 102,
-        "title": "Feeling Lost, But Learning",
-        "content": "Adjusting to college life is tough...",
-        "likes": 17,
-        "createdAt": "2025-05-02T10:15:00Z",
-        "tags": ["mental health"]
-      },
-      {
-        "id": 103,
-        "title": "Late Night Thoughts",
-        "content": "Sometimes I wonder if this is where I’m meant to be.",
-        "likes": 31,
-        "createdAt": "2025-05-03T00:20:00Z",
-        "tags": ["personal", "reflection"]
-      },
-      {
-        "id": 104,
-        "title": "Tips for Freshers",
-        "content": "Start early. Stay consistent. Ask questions.",
-        "likes": 45,
-        "createdAt": "2025-05-04T08:00:00Z",
-        "tags": ["college", "advice"]
-      }
-    ],
-  
-    "likedPosts": [
-      {
-        "id": 201,
-        "title": "Top 5 Study Hacks for Finals",
-        "author": "Jane Smith",
-        "likes": 50
-      },
-      {
-        "id": 202,
-        "title": "Dealing with Exam Stress",
-        "author": "Alex Johnson",
-        "likes": 35
-      },
-      {
-        "id": 203,
-        "title": "Why I Switched Majors",
-        "author": "Chris Liu",
-        "likes": 40
-      }
-    ],
-  
-    "likedCommunities": [
-      {
-        "id": 1,
-        "name": "Tech Enthusiasts",
-        "description": "A group for tech lovers."
-      },
-      {
-        "id": 2,
-        "name": "Mental Health Matters",
-        "description": "A safe space to share and support."
-      },
-      {
-        "id": 3,
-        "name": "Writers Club",
-        "description": "For those who write to express, reflect, and explore."
-      },
-      {
-        "id": 4,
-        "name": "Study Buddies",
-        "description": "Form study groups and stay accountable."
-      },
-      {
-        "id": 5,
-        "name": "Gamers at Campus",
-        "description": "Chill and connect over gaming."
-      }
-    ],
-  
-    "chats": [
-      {
-        "withUser": {
-          "id": 2,
-          "name": "Jane Smith",
-          "profilePic": "https://via.placeholder.com/150"
-        },
-        "conversationId": 501,
-        "messages": [
-          {
-            "sender": "John Doe",
-            "message": "Hey Jane! How's your week going?",
-            "timestamp": "2025-05-03T08:30:00Z"
-          },
-          {
-            "sender": "Jane Smith",
-            "message": "Pretty good! Just prepping for exams. You?",
-            "timestamp": "2025-05-03T08:45:00Z"
-          },
-          {
-            "sender": "John Doe",
-            "message": "Same here. Let's ace them together!",
-            "timestamp": "2025-05-03T08:50:00Z"
-          }
-        ]
-      },
-      {
-        "withUser": {
-          "id": 3,
-          "name": "Alex Johnson",
-          "profilePic": "https://via.placeholder.com/150"
-        },
-        "conversationId": 502,
-        "messages": [
-          {
-            "sender": "Alex Johnson",
-            "message": "Wanna co-write a blog on student burnout?",
-            "timestamp": "2025-05-02T16:00:00Z"
-          },
-          {
-            "sender": "John Doe",
-            "message": "That sounds great! I’ll send over some notes tonight.",
-            "timestamp": "2025-05-02T16:15:00Z"
-          }
-        ]
-      }
-    ],
-  
-    "followers": [
-      {
+  "id": 1,
+  "name": "John Doe",
+  "profilePic": "https://via.placeholder.com/150",
+  "bio": "A passionate writer and thinker.",
+  "postsCount": 12,
+  "likesReceived": 87,
+  "followersCount": 45,
+  "followingCount": 18,
+  "joinedCommunities": 5,
+  "bookmarkedPosts": 7,
+
+  "posts": [
+    {
+      "id": 101,
+      "title": "My First Day in College",
+      "content": "It was a whirlwind of emotions...",
+      "likes": 23,
+      "createdAt": "2025-05-01T14:30:00Z",
+      "tags": ["college", "life"]
+    },
+    {
+      "id": 102,
+      "title": "Feeling Lost, But Learning",
+      "content": "Adjusting to college life is tough...",
+      "likes": 17,
+      "createdAt": "2025-05-02T10:15:00Z",
+      "tags": ["mental health"]
+    },
+    {
+      "id": 103,
+      "title": "Late Night Thoughts",
+      "content": "Sometimes I wonder if this is where I’m meant to be.",
+      "likes": 31,
+      "createdAt": "2025-05-03T00:20:00Z",
+      "tags": ["personal", "reflection"]
+    },
+    {
+      "id": 104,
+      "title": "Tips for Freshers",
+      "content": "Start early. Stay consistent. Ask questions.",
+      "likes": 45,
+      "createdAt": "2025-05-04T08:00:00Z",
+      "tags": ["college", "advice"]
+    }
+  ],
+
+  "likedPosts": [
+    {
+      "id": 201,
+      "title": "Top 5 Study Hacks for Finals",
+      "author": "Jane Smith",
+      "likes": 50
+    },
+    {
+      "id": 202,
+      "title": "Dealing with Exam Stress",
+      "author": "Alex Johnson",
+      "likes": 35
+    },
+    {
+      "id": 203,
+      "title": "Why I Switched Majors",
+      "author": "Chris Liu",
+      "likes": 40
+    }
+  ],
+
+  "likedCommunities": [
+    {
+      "id": 1,
+      "name": "Tech Enthusiasts",
+      "description": "A group for tech lovers."
+    },
+    {
+      "id": 2,
+      "name": "Mental Health Matters",
+      "description": "A safe space to share and support."
+    },
+    {
+      "id": 3,
+      "name": "Writers Club",
+      "description": "For those who write to express, reflect, and explore."
+    },
+    {
+      "id": 4,
+      "name": "Study Buddies",
+      "description": "Form study groups and stay accountable."
+    },
+    {
+      "id": 5,
+      "name": "Gamers at Campus",
+      "description": "Chill and connect over gaming."
+    }
+  ],
+
+  "createdCommunities": [
+    {
+      "id": 6,
+      "name": "Creative Coders",
+      "description": "Merging creativity with code."
+    },
+    {
+      "id": 7,
+      "name": "Campus Journalists",
+      "description": "Report, write, and reflect student life."
+    }
+  ],
+
+  "chats": [
+    {
+      "withUser": {
         "id": 2,
         "name": "Jane Smith",
         "profilePic": "https://via.placeholder.com/150"
       },
-      {
+      "conversationId": 501,
+      "messages": [
+        {
+          "sender": "John Doe",
+          "message": "Hey Jane! How's your week going?",
+          "timestamp": "2025-05-03T08:30:00Z"
+        },
+        {
+          "sender": "Jane Smith",
+          "message": "Pretty good! Just prepping for exams. You?",
+          "timestamp": "2025-05-03T08:45:00Z"
+        },
+        {
+          "sender": "John Doe",
+          "message": "Same here. Let's ace them together!",
+          "timestamp": "2025-05-03T08:50:00Z"
+        }
+      ]
+    },
+    {
+      "withUser": {
         "id": 3,
         "name": "Alex Johnson",
         "profilePic": "https://via.placeholder.com/150"
       },
-      {
-        "id": 4,
-        "name": "Chris Liu",
-        "profilePic": "https://via.placeholder.com/150"
-      }
-    ],
-  
-    "following": [
-      {
-        "id": 5,
-        "name": "Sam Lee",
-        "profilePic": "https://via.placeholder.com/150"
-      },
-      {
-        "id": 6,
-        "name": "Sara Black",
-        "profilePic": "https://via.placeholder.com/150"
-      },
-      {
-        "id": 7,
-        "name": "Michael Brown",
-        "profilePic": "https://via.placeholder.com/150"
-      }
-    ]
-  }
-  
+      "conversationId": 502,
+      "messages": [
+        {
+          "sender": "Alex Johnson",
+          "message": "Wanna co-write a blog on student burnout?",
+          "timestamp": "2025-05-02T16:00:00Z"
+        },
+        {
+          "sender": "John Doe",
+          "message": "That sounds great! I’ll send over some notes tonight.",
+          "timestamp": "2025-05-02T16:15:00Z"
+        }
+      ]
+    }
+  ],
+
+  "followers": [
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "profilePic": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "name": "Alex Johnson",
+      "profilePic": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 4,
+      "name": "Chris Liu",
+      "profilePic": "https://via.placeholder.com/150"
+    }
+  ],
+
+  "following": [
+    {
+      "id": 5,
+      "name": "Sam Lee",
+      "profilePic": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 6,
+      "name": "Sara Black",
+      "profilePic": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 7,
+      "name": "Michael Brown",
+      "profilePic": "https://via.placeholder.com/150"
+    }
+  ]
+}

@@ -8,9 +8,10 @@ import Signup from './components/SmallerComponents/Signup';
 
 import HomePage from './components/Pages/HomePage';
 import Feed from './components/Pages/Feed';
-// import other pages as needed...
+import Communities from './components/Pages/Communities';
 
-// Wrapper to handle conditional layout
+
+
 const AppLayout = () => {
   const location = useLocation();
   const hideNavbarFooter = location.pathname === '/login' || location.pathname === '/signup';
@@ -23,7 +24,8 @@ const AppLayout = () => {
         <Route path="/feed" element={<Feed />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        {/* Add more routes as needed */}
+        <Route path="/communities" element={<Communities />} />
+      
       </Routes>
       {!hideNavbarFooter && <Footer />}
     </>

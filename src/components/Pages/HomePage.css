@@ -1,12 +1,12 @@
-/* HomePage.css */
 
-/* Global Styles */
+
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f7f7f7;
 }
 
-/* Hero Section */
+
 .hero-section {
   background-color: #f2e6ff;
   color: #4b007d;
@@ -52,7 +52,7 @@ body {
   color: #6c4fa3;
 }
 
-/* Post List Grid */
+
 .post-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -60,7 +60,7 @@ body {
   margin-top: 2rem;
 }
 
-/* Post Card */
+
 .home-post-card {
   background-color: #faf5ff;
   border: 1px solid #e2d8f3;
@@ -118,7 +118,7 @@ body {
   border-radius: 15px;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
   .post-list {
     grid-template-columns: repeat(2, 1fr);

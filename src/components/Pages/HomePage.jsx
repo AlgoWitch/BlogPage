@@ -5,10 +5,9 @@ import './HomePage.css';
 function HomePage() {
   const [posts, setPosts] = useState([]);
   
-  // Simulated login state — replace with real auth logic later
+ 
   const isLoggedIn = false;
 
-  // Dummy posts for first-time visitors
   const randomGuestPosts = [
     {
       id: 1,
@@ -159,16 +158,16 @@ function HomePage() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      // Collect posts from followed users
+      
       const followingIds = userData.following.map(user => user.id);
       
-      // Simulated API that might return all posts (you would normally filter server-side)
-      const followedPosts = []; // Assuming we had access to all users' posts (not in this dummy)
+    
+      const followedPosts = []; 
 
-      // Since dummy API only has posts for John Doe, we'll show their own posts for now
+     
       setPosts(userData.posts || []);
     } else {
-      // Show guest posts
+      
       setPosts(randomGuestPosts);
     }
   }, [isLoggedIn]);
