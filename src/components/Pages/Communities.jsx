@@ -36,11 +36,17 @@ function Communities() {
 
   const renderCommunities = (communities) => {
     if (!isLoggedIn && (activeTab === 'created' || activeTab === 'subscribed')) {
+      const msg =
+        activeTab === 'created'
+          ? 'Sign up or log in to see your created communities.'
+          : 'Sign up or log in to see your subscribed communities.';
       return (
-        <div style={{ textAlign: 'center', marginTop: '2rem', fontSize: '1rem', color: '#777' }}>
-          {activeTab === 'created'
-            ? 'Signup/login to see your created communities'
-            : 'Signup/login to see your subscribed communities'}
+        <div className="login-message-container">
+          <div className="login-message-box">
+            <h3>🔒 Hold up!</h3>
+            <p>{msg}</p>
+            <button className="soft-auth-btn">Login / Signup</button>
+          </div>
         </div>
       );
     }

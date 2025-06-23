@@ -53,31 +53,6 @@
   background-color: #b982e8;
 }
 
-.tag-filters {
-  display: flex;
-  justify-content: center;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-  margin: 1rem 0;
-}
-
-.tag-btn {
-  background-color: #f2e5ff;
-  border: none;
-  border-radius: 15px;
-  padding: 0.4rem 0.9rem;
-  font-size: 0.85rem;
-  color: #6f42c1;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.tag-btn:hover,
-.tag-btn.active {
-  background-color: #c9a0ff;
-  color: white;
-}
-
 .tab-buttons {
   display: flex;
   justify-content: center;
@@ -107,11 +82,11 @@
 }
 
 .community-list {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 1rem;
-  }
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 1rem;
+}
 
 .community-card {
   background-color: #fff0fa;
@@ -140,28 +115,6 @@
   margin-bottom: 0.8rem;
 }
 
-.card-tags {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.8rem;
-}
-
-.card-tag {
-  background-color: #ecdfff;
-  color: #703e9e;
-  padding: 0.3rem 0.7rem;
-  font-size: 0.75rem;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.card-tag:hover {
-  background-color: #cba8f0;
-  color: white;
-}
-
 .visit-btn {
   background-color: #bc84ff;
   color: white;
@@ -178,34 +131,76 @@
   background-color: #a065db;
 }
 
-/* Responsive */
+/* ✨ Login message box styling */
+.login-message-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.login-message-box {
+  background-color: #fbeeff;
+  border: 2px dashed #d5a6f5;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 460px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(120, 80, 160, 0.1);
+}
+
+.login-message-box h3 {
+  color: #814fb3;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.login-message-box p {
+  color: #6f6f6f;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.soft-auth-btn {
+  background-color: #c391f3;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.soft-auth-btn:hover {
+  background-color: #a065db;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .community-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 600px) {
   .community-controls {
     flex-direction: column;
     align-items: center;
   }
 
-  .community-controls input {
-    width: 90%;
-  }
-
+  .community-controls input,
   .community-controls button {
     width: 90%;
   }
 
-  .tag-filters {
-    justify-content: flex-start;
+  .tab-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .community-list {
+    grid-template-columns: 1fr;
   }
 }
-@media (max-width: 900px) {
-    .community-list {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .community-list {
-      grid-template-columns: 1fr;
-    }
-  }
-  
