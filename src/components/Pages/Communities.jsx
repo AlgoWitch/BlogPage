@@ -4,8 +4,8 @@ import userData from '../../data/userData.json';
 import './Communities.css';
 
 function Communities() {
-  const isLoggedIn = true; // Replace with real auth logic
-  const [activeTab, setActiveTab] = useState('subscribed');
+  const isLoggedIn = false; // ← switch to true for testing logged-in view
+  const [activeTab, setActiveTab] = useState(isLoggedIn ? 'subscribed' : 'recommended');
   const [searchTerm, setSearchTerm] = useState('');
 
   const createdCommunities = userData.createdCommunities || [];
@@ -19,32 +19,46 @@ function Communities() {
   ];
 
   const allCommunities = {
-    created: createdCommunities,
-    subscribed: subscribedCommunities,
+    created: isLoggedIn ? createdCommunities : null,
+    subscribed: isLoggedIn ? subscribedCommunities : null,
     recommended: recommendedCommunities
   };
 
   const handleSearch = () => {
-    // Optional: implement search logic on button click
+    // Optional: add actual search functionality if needed
   };
 
   const filterCommunities = (communities) =>
-    communities.filter(comm =>
+    communities?.filter(comm =>
       comm.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       comm.description.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    ) || [];
 
-  const renderCommunities = (communities) => (
-    <div className="community-list">
-      {filterCommunities(communities).map((community) => (
-        <div key={community.id} className="community-card">
-          <h3>{community.name}</h3>
-          <p>{community.description}</p>
-          <button className="visit-btn">Visit</button>
+  const renderCommunities = (communities) => {
+    if (!isLoggedIn && (activeTab === 'created' || activeTab === 'subscribed')) {
+      return (
+        <div style={{ textAlign: 'center', marginTop: '2rem', fontSize: '1rem', color: '#777' }}>
+          {activeTab === 'created'
+            ? 'Signup/login to see your created communities'
+            : 'Signup/login to see your subscribed communities'}
         </div>
-      ))}
-    </div>
-  );
+      );
+    }
+
+    const filtered = filterCommunities(communities);
+
+    return (
+      <div className="community-list">
+        {filtered.map((community) => (
+          <div key={community.id} className="community-card">
+            <h3>{community.name}</h3>
+            <p>{community.description}</p>
+            <button className="visit-btn">Visit</button>
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <div className="communities-page">
@@ -64,12 +78,8 @@ function Communities() {
       </div>
 
       <div className="tab-buttons">
-        {isLoggedIn && (
-          <>
-            <button onClick={() => setActiveTab('subscribed')} className={activeTab === 'subscribed' ? 'active' : ''}>Subscribed</button>
-            <button onClick={() => setActiveTab('created')} className={activeTab === 'created' ? 'active' : ''}>Created</button>
-          </>
-        )}
+        <button onClick={() => setActiveTab('subscribed')} className={activeTab === 'subscribed' ? 'active' : ''}>Subscribed</button>
+        <button onClick={() => setActiveTab('created')} className={activeTab === 'created' ? 'active' : ''}>Created</button>
         <button onClick={() => setActiveTab('recommended')} className={activeTab === 'recommended' ? 'active' : ''}>Recommended</button>
       </div>
 

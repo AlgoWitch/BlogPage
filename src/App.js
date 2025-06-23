@@ -9,6 +9,7 @@ import Signup from './components/SmallerComponents/Signup';
 import HomePage from './components/Pages/HomePage';
 import Feed from './components/Pages/Feed';
 import Communities from './components/Pages/Communities';
+import Profile from './components/Pages/Profile';
 
 
 
@@ -25,6 +26,7 @@ const AppLayout = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/communities" element={<Communities />} />
+        <Route path="/profile" element={<Profile />} />
       
       </Routes>
       {!hideNavbarFooter && <Footer />}
