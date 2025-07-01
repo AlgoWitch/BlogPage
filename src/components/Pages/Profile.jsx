@@ -1,11 +1,47 @@
-// src/components/Pages/ProfilePage.jsx
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AuthContext } from '../SmallerComponents/AuthContext';
 import userData from '../../data/userData.json';
+import CreatePostButton from '../SmallerComponents/CreatePostButton';
+import { FaEllipsisV } from 'react-icons/fa';
 import './Profile.css';
 
 function ProfilePage() {
-  const isLoggedIn = false; // Replace with real login state
+  const { isLoggedIn } = useContext(AuthContext);
+  const [posts, setPosts] = useState(userData.posts || []);
   const [activeTab, setActiveTab] = useState('named');
+
+  // menu and editing state
+  const [menuOpen, setMenuOpen] = useState(null);
+  const [editingPost, setEditingPost] = useState(null);
+  const [editContent, setEditContent] = useState('');
+
+  const handleNewPost = (newPost) => {
+    setPosts((prev) => [newPost, ...prev]);
+  };
+
+  const toggleMenu = (postId) => {
+    setMenuOpen(menuOpen === postId ? null : postId);
+  };
+
+  const handleDelete = (postId) => {
+    setPosts(posts.filter((p) => p.id !== postId));
+    setMenuOpen(null);
+  };
+
+  const startEditing = (post) => {
+    setEditingPost(post);
+    setEditContent(post.content);
+    setMenuOpen(null);
+  };
+
+  const saveEdit = (postId) => {
+    setPosts(
+      posts.map((p) =>
+        p.id === postId ? { ...p, content: editContent } : p
+      )
+    );
+    setEditingPost(null);
+  };
 
   if (!isLoggedIn) {
     return (
@@ -19,9 +55,8 @@ function ProfilePage() {
     );
   }
 
-  const namedPosts = userData.posts.filter(post => !post.anonymous);
-  const anonymousPosts = userData.posts.filter(post => post.anonymous);
-
+  const namedPosts = posts.filter((post) => !post.anonymous);
+  const anonymousPosts = posts.filter((post) => post.anonymous);
   const postsToShow = activeTab === 'named' ? namedPosts : anonymousPosts;
 
   return (
@@ -31,12 +66,18 @@ function ProfilePage() {
         <h2>{userData.name}</h2>
         <p>{userData.bio}</p>
         <div className="profile-stats">
-          <span><strong>{userData.postsCount}</strong> posts</span>
+          <span><strong>{posts.length}</strong> posts</span>
           <span><strong>{userData.followersCount}</strong> followers</span>
           <span><strong>{userData.followingCount}</strong> following</span>
         </div>
       </div>
 
+      {/* Create Post Button */}
+      <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
+        <CreatePostButton onPost={handleNewPost} />
+      </div>
+
+      {/* Tabs */}
       <div className="profile-tabs">
         <button
           className={activeTab === 'named' ? 'active' : ''}
@@ -52,11 +93,43 @@ function ProfilePage() {
         </button>
       </div>
 
+      {/* Posts */}
       <div className="profile-posts">
         {postsToShow.map((post) => (
           <div key={post.id} className="profile-post-card">
-            <h4>{post.title}</h4>
-            <p>{post.content}</p>
+            <div className="post-header">
+              <h4>{post.title}</h4>
+              <div className="post-options">
+                <FaEllipsisV onClick={() => toggleMenu(post.id)} />
+                {menuOpen === post.id && (
+                  <div className="post-dropdown">
+                    <button onClick={() => startEditing(post)}>Edit</button>
+                    <button onClick={() => handleDelete(post.id)}>Delete</button>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {editingPost?.id === post.id ? (
+              <>
+                <textarea
+                  value={editContent}
+                  onChange={(e) => setEditContent(e.target.value)}
+                  rows="4"
+                  style={{ width: '100%', marginTop: '0.5rem' }}
+                />
+                <button
+                  className="primary-btn"
+                  style={{ marginTop: '0.5rem' }}
+                  onClick={() => saveEdit(post.id)}
+                >
+                  Save
+                </button>
+              </>
+            ) : (
+              <p>{post.content}</p>
+            )}
+
             <div className="post-meta">
               <span>{new Date(post.createdAt).toLocaleDateString()}</span>
               <span>❤️ {post.likes}</span>

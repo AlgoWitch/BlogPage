@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+// src/components/SmallerComponents/Navbar.jsx
+import React, { useState, useContext } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './Navbar.css';
+import { AuthContext } from './AuthContext';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isLoggedIn, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const handleLogout = () => {
+    logout();
+    setMenuOpen(false);
+    navigate('/');
+  };
 
   return (
     <nav className="navbar">
@@ -22,8 +32,14 @@ const Navbar = () => {
       </div>
 
       <div className={`navbar-auth ${menuOpen ? 'active' : ''}`}>
-        <NavLink to="/login" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Login</NavLink>
-        <NavLink to="/signup" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Signup</NavLink>
+        {!isLoggedIn ? (
+          <>
+            <NavLink to="/login" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Login</NavLink>
+            <NavLink to="/signup" className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}>Signup</NavLink>
+          </>
+        ) : (
+          <button onClick={handleLogout} className="nav-link logout-btn">Logout</button>
+        )}
       </div>
     </nav>
   );

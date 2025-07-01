@@ -1,10 +1,11 @@
 // src/components/Pages/Communities.jsx
-import React, { useState } from 'react';
+import React, { useState,useContext} from 'react';
 import userData from '../../data/userData.json';
+import { AuthContext } from '../SmallerComponents/AuthContext';
 import './Communities.css';
 
 function Communities() {
-  const isLoggedIn = false; // ← switch to true for testing logged-in view
+  const { isLoggedIn } = useContext(AuthContext); // ← switch to true for testing logged-in view
   const [activeTab, setActiveTab] = useState(isLoggedIn ? 'subscribed' : 'recommended');
   const [searchTerm, setSearchTerm] = useState('');
 

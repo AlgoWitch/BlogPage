@@ -1,10 +1,11 @@
 // src/components/Pages/Messages.jsx
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import userData from '../../data/userData.json';
+import { AuthContext } from '../SmallerComponents/AuthContext';
 import './Messages.css';
 
 function Messages() {
-  const isLoggedIn = false; // Change this to false to test the logged-out view
+  const { isLoggedIn } = useContext(AuthContext); // Change this to false to test the logged-out view
 
   const chats = userData.chats || [];
 

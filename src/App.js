@@ -1,5 +1,7 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AuthProvider } from './components/SmallerComponents/AuthContext'; 
 
 import Navbar from './components/SmallerComponents/Navbar';
 import Footer from './components/SmallerComponents/Footer';
@@ -11,8 +13,6 @@ import Feed from './components/Pages/Feed';
 import Communities from './components/Pages/Communities';
 import Profile from './components/Pages/Profile';
 import Messages from './components/Pages/Messages';
-
-
 
 const AppLayout = () => {
   const location = useLocation();
@@ -29,8 +29,6 @@ const AppLayout = () => {
         <Route path="/communities" element={<Communities />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/messages" element={<Messages />} />
-      
-      
       </Routes>
       {!hideNavbarFooter && <Footer />}
     </>
@@ -40,7 +38,9 @@ const AppLayout = () => {
 function App() {
   return (
     <Router>
-      <AppLayout />
+      <AuthProvider> {/* 👈 provides context to the entire app */}
+        <AppLayout />
+      </AuthProvider>
     </Router>
   );
 }
