@@ -177,5 +177,45 @@
       "name": "Michael Brown",
       "profilePic": "https://via.placeholder.com/150"
     }
-  ]
+  ],
+  "savedResources": [
+  {
+    "id": 101,
+    "title": "Complete DSA Roadmap",
+    "type": "roadmap",
+    "link": "https://example.com/dsa-roadmap",
+    "description": "A curated roadmap for mastering Data Structures and Algorithms.",
+    "uploadedBy": "Jane Smith",
+    "uploadedById": 2,
+    "date": "2025-06-20",
+    "tags": ["dsa", "programming", "roadmap"]
+  },
+  {
+    "id": 102,
+    "title": "Mental Health Guidebook",
+    "type": "book",
+    "link": "https://example.com/mental-health",
+    "description": "An easy-to-follow book on managing mental well-being.",
+    "uploadedBy": "Chris Liu",
+    "uploadedById": 4,
+    "date": "2025-07-01",
+    "tags": ["mental health", "well-being", "guide"]
+  }
+],
+
+"uploadedResources": [
+  {
+    "id": 103,
+    "title": "First-Year Engineering Notes",
+    "type": "notes",
+    "link": "https://example.com/engg-notes",
+    "description": "Comprehensive notes for first-year students.",
+    "uploadedBy": "John Doe",
+    "uploadedById": 1,
+    "date": "2025-07-14",
+    "tags": ["engineering", "notes", "semester 1"]
+  }
+]
+
+
 }

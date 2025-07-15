@@ -16,6 +16,7 @@ import Feed from './components/Pages/Feed';
 import Communities from './components/Pages/Communities';
 import Profile from './components/Pages/Profile';
 import Messages from './components/Pages/Messages';
+import Resources from './components/Pages/Resources';
 
 const AppLayout = () => {
   const location = useLocation();
@@ -34,7 +35,7 @@ const AppLayout = () => {
         <Route path="/messages" element={<Messages />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        
+        <Route path="/resources" element={<Resources />} />
       </Routes>
       {!hideNavbarFooter && <Footer />}
     </>
