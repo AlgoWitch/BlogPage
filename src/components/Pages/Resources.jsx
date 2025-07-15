@@ -32,6 +32,77 @@ function Resources() {
       type: 'Book',
       link: 'https://sysdesign.io',
     },
+    {
+        id: 4,
+        title: 'Frontend Development Guide',
+        description: 'Complete learning guide for HTML, CSS, and JavaScript',
+        type: 'Roadmap',
+        link: 'https://frontendguide.dev',
+      },
+      {
+        id: 5,
+        title: 'C++ Programming Notes',
+        description: 'Concise notes for beginner to advanced C++ concepts',
+        type: 'Notes',
+        link: 'https://cppnotes.io',
+      },
+      {
+        id: 6,
+        title: 'Cracking the Coding Interview',
+        description: 'Ebook to prepare for technical interviews',
+        type: 'Book',
+        link: 'https://ctci-book.com',
+      },
+      {
+        id: 7,
+        title: 'SQL Cheatsheet',
+        description: 'Handy reference for most-used SQL commands',
+        type: 'Notes',
+        link: 'https://sqlcheats.dev',
+      },
+      {
+        id: 8,
+        title: 'Operating System Handbook',
+        description: 'Free book covering OS fundamentals',
+        type: 'Book',
+        link: 'https://os-handbook.org',
+      },
+      {
+        id: 9,
+        title: 'DevOps Career Roadmap',
+        description: 'Roadmap for becoming a DevOps Engineer',
+        type: 'Roadmap',
+        link: 'https://devopsroadmap.io',
+      },
+      {
+        id: 10,
+        title: 'Computer Networks Summary Notes',
+        description: 'Quick notes for CN exams and interviews',
+        type: 'Notes',
+        link: 'https://cn-summary.com',
+      },
+      {
+        id: 11,
+        title: 'Java Programming eBook',
+        description: 'Complete guide to learning Java',
+        type: 'Book',
+        link: 'https://javabook.dev',
+      },
+      {
+        id: 12,
+        title: 'AI Engineer Roadmap',
+        description: 'Comprehensive roadmap for becoming an AI Engineer',
+        type: 'Roadmap',
+        link: 'https://airoadmap.tech',
+      },
+      {
+        id: 13,
+        title: 'DSA Notes with Examples',
+        description: 'Cleanly organized notes on Data Structures & Algorithms',
+        type: 'Notes',
+        link: 'https://dsanotes.com',
+      }
+      
   ]);
 
   const savedResources = userData.savedResources || [];

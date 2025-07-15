@@ -29,7 +29,98 @@
         "likes": 15,
         "createdAt": "2024-05-22",
         "tags": ["confession"]
+      },
+      {
+        "id": 3,
+        "title": "A Quiet Victory",
+        "content": "Sometimes winning means walking away.",
+        "anonymous": false,
+        "likes": 23,
+        "createdAt": "2024-06-01",
+        "tags": ["growth", "life"]
+      },
+      {
+        "id": 4,
+        "title": "No One Knows",
+        "content": "Everyone thinks I’m doing great. I’m not.",
+        "anonymous": true,
+        "likes": 38,
+        "createdAt": "2024-06-03",
+        "tags": ["mental health", "anonymous"]
+      },
+      {
+        "id": 5,
+        "title": "Sunsets & Starts",
+        "content": "New beginnings often look like painful endings.",
+        "anonymous": false,
+        "likes": 47,
+        "createdAt": "2024-06-05",
+        "tags": ["life", "change"]
+      },
+      {
+        "id": 6,
+        "title": "Crushed",
+        "content": "Failed my exam. Again. I don’t know how to face them.",
+        "anonymous": true,
+        "likes": 52,
+        "createdAt": "2024-06-07",
+        "tags": ["failure", "confession"]
+      },
+      {
+        "id": 7,
+        "title": "The Messy Middle",
+        "content": "Nobody talks about how hard the 'in-between' phase is.",
+        "anonymous": false,
+        "likes": 33,
+        "createdAt": "2024-06-08",
+        "tags": ["honesty", "thoughts"]
+      },
+      {
+        "id": 8,
+        "title": "Late Night Panic",
+        "content": "I cried myself to sleep last night. Again.",
+        "anonymous": true,
+        "likes": 61,
+        "createdAt": "2024-06-10",
+        "tags": ["mental health", "confession"]
+      },
+      {
+        "id": 9,
+        "title": "Tiny Wins",
+        "content": "I got out of bed today. That’s enough.",
+        "anonymous": true,
+        "likes": 89,
+        "createdAt": "2024-06-11",
+        "tags": ["mental health", "tiny wins"]
+      },
+      {
+        "id": 10,
+        "title": "Peace in Chaos",
+        "content": "Found a moment of silence in the loudest place.",
+        "anonymous": false,
+        "likes": 17,
+        "createdAt": "2024-06-13",
+        "tags": ["reflection"]
+      },
+      {
+        "id": 11,
+        "title": "Not Okay",
+        "content": "Pretending to be fine is exhausting.",
+        "anonymous": true,
+        "likes": 74,
+        "createdAt": "2024-06-14",
+        "tags": ["mental health", "anonymous"]
+      },
+      {
+        "id": 12,
+        "title": "Gratitude List",
+        "content": "Today I’m grateful for my friend, chai, and evening breeze.",
+        "anonymous": false,
+        "likes": 36,
+        "createdAt": "2024-06-16",
+        "tags": ["gratitude", "positivity"]
       }
+      
     ],
   
 
@@ -140,7 +231,209 @@
           "timestamp": "2025-05-02T16:15:00Z"
         }
       ]
+    },
+    {
+      "withUser": {
+        "id": 4,
+        "name": "Priya Mehta",
+        "profilePic": "https://randomuser.me/api/portraits/women/44.jpg"
+      },
+      "conversationId": 503,
+      "messages": [
+        {
+          "sender": "Priya Mehta",
+          "message": "Hey! Did you get the notes for DBMS?",
+          "timestamp": "2025-05-04T10:00:00Z"
+        },
+        {
+          "sender": "John Doe",
+          "message": "Yep, I’ll share them in a minute.",
+          "timestamp": "2025-05-04T10:02:00Z"
+        }
+      ]
+    },
+    {
+      "withUser": {
+        "id": 5,
+        "name": "Rahul Verma",
+        "profilePic": "https://randomuser.me/api/portraits/men/45.jpg"
+      },
+      "conversationId": 504,
+      "messages": [
+        {
+          "sender": "Rahul Verma",
+          "message": "Let’s meet for the hackathon prep today?",
+          "timestamp": "2025-05-05T14:00:00Z"
+        },
+        {
+          "sender": "John Doe",
+          "message": "Sure! I’m free after 5 PM.",
+          "timestamp": "2025-05-05T14:05:00Z"
+        }
+      ]
+    },
+    {
+      "withUser": {
+        "id": 6,
+        "name": "Ananya Roy",
+        "profilePic": "https://randomuser.me/api/portraits/women/46.jpg"
+      },
+      "conversationId": 505,
+      "messages": [
+        {
+          "sender": "Ananya Roy",
+          "message": "Can you review my essay tonight?",
+          "timestamp": "2025-05-06T19:15:00Z"
+        },
+        {
+          "sender": "John Doe",
+          "message": "Sure, send it over.",
+          "timestamp": "2025-05-06T19:16:00Z"
+        }
+      ]
+    },
+    {
+      "withUser": {
+        "id": 7,
+        "name": "Kabir Shah",
+        "profilePic": "https://randomuser.me/api/portraits/men/47.jpg"
+      },
+      "conversationId": 506,
+      "messages": [
+        {
+          "sender": "Kabir Shah",
+          "message": "Bro, the CS project deadline got extended!",
+          "timestamp": "2025-05-07T09:30:00Z"
+        },
+        {
+          "sender": "John Doe",
+          "message": "No way! That's a relief 😅",
+          "timestamp": "2025-05-07T09:31:00Z"
+        }
+      ]
+    },
+    {
+      "withUser": {
+        "id": 8,
+        "name": "Sneha Kapoor",
+        "profilePic": "https://randomuser.me/api/portraits/women/48.jpg"
+      },
+      "conversationId": 507,
+      "messages": [
+        {
+          "sender": "Sneha Kapoor",
+          "message": "Can you help with Python tomorrow?",
+          "timestamp": "2025-05-08T18:00:00Z"
+        },
+        {
+          "sender": "John Doe",
+          "message": "Of course! Meet after class?",
+          "timestamp": "2025-05-08T18:05:00Z"
+        }
+      ]
+    },
+    {
+      "withUser": {
+        "id": 9,
+        "name": "Amit Sharma",
+        "profilePic": "https://randomuser.me/api/portraits/men/49.jpg"
+      },
+      "conversationId": 508,
+      "messages": [
+        {
+          "sender": "Amit Sharma",
+          "message": "Don’t forget the group meeting at 4!",
+          "timestamp": "2025-05-09T13:45:00Z"
+        },
+        {
+          "sender": "John Doe",
+          "message": "Noted. See you there!",
+          "timestamp": "2025-05-09T13:50:00Z"
+        }
+      ]
+    },
+    {
+      "withUser": {
+        "id": 10,
+        "name": "Divya Nair",
+        "profilePic": "https://randomuser.me/api/portraits/women/50.jpg"
+      },
+      "conversationId": 509,
+      "messages": [
+        {
+          "sender": "Divya Nair",
+          "message": "Should we present first or last?",
+          "timestamp": "2025-05-10T11:00:00Z"
+        },
+        {
+          "sender": "John Doe",
+          "message": "Let’s go last so we can polish slides.",
+          "timestamp": "2025-05-10T11:03:00Z"
+        }
+      ]
+    },
+    {
+      "withUser": {
+        "id": 11,
+        "name": "Nikhil Anand",
+        "profilePic": "https://randomuser.me/api/portraits/men/51.jpg"
+      },
+      "conversationId": 510,
+      "messages": [
+        {
+          "sender": "Nikhil Anand",
+          "message": "Are you attending the seminar today?",
+          "timestamp": "2025-05-11T08:10:00Z"
+        },
+        {
+          "sender": "John Doe",
+          "message": "Yes, I’ll be there in 10.",
+          "timestamp": "2025-05-11T08:15:00Z"
+        }
+      ]
+    },
+    {
+      "withUser": {
+        "id": 12,
+        "name": "Riya Malhotra",
+        "profilePic": "https://randomuser.me/api/portraits/women/52.jpg"
+      },
+      "conversationId": 511,
+      "messages": [
+        {
+          "sender": "Riya Malhotra",
+          "message": "Your post on burnout really resonated with me.",
+          "timestamp": "2025-05-12T17:00:00Z"
+        },
+        {
+          "sender": "John Doe",
+          "message": "Thanks Riya! That means a lot 😊",
+          "timestamp": "2025-05-12T17:10:00Z"
+        }
+      ]
+    },
+    {
+      "withUser": {
+        "id": 13,
+        "name": "Zaid Khan",
+        "profilePic": "https://randomuser.me/api/portraits/men/53.jpg"
+      },
+      "conversationId": 512,
+      "messages": [
+        {
+          "sender": "Zaid Khan",
+          "message": "Check out the new community dashboard design?",
+          "timestamp": "2025-05-13T21:00:00Z"
+        },
+        {
+          "sender": "John Doe",
+          "message": "Looks awesome! We should push it live.",
+          "timestamp": "2025-05-13T21:05:00Z"
+        }
+      ]
     }
+    
+
   ],
 
   "followers": [
@@ -200,6 +493,61 @@
     "uploadedById": 4,
     "date": "2025-07-01",
     "tags": ["mental health", "well-being", "guide"]
+  },
+  {
+    "id": 109,
+    "title": "Git & GitHub Basics",
+    "type": "notes",
+    "link": "https://example.com/git-notes",
+    "description": "Concise notes on version control with Git & GitHub.",
+    "uploadedBy": "John Doe",
+    "uploadedById": 1,
+    "date": "2025-07-08",
+    "tags": ["git", "version control", "notes"]
+  },
+  {
+    "id": 110,
+    "title": "Computer Networks Roadmap",
+    "type": "roadmap",
+    "link": "https://example.com/networks-roadmap",
+    "description": "Detailed roadmap to learn computer networks step-by-step.",
+    "uploadedBy": "John Doe",
+    "uploadedById": 1,
+    "date": "2025-07-07",
+    "tags": ["networks", "roadmap", "systems"]
+  },
+  {
+    "id": 111,
+    "title": "Machine Learning PDF Notes",
+    "type": "notes",
+    "link": "https://example.com/ml-notes",
+    "description": "PDF notes covering all major ML concepts.",
+    "uploadedBy": "John Doe",
+    "uploadedById": 1,
+    "date": "2025-07-06",
+    "tags": ["ML", "notes", "AI"]
+  },
+  {
+    "id": 112,
+    "title": "Frontend Development Roadmap",
+    "type": "roadmap",
+    "link": "https://example.com/frontend-roadmap",
+    "description": "Everything you need to know to become a frontend developer.",
+    "uploadedBy": "John Doe",
+    "uploadedById": 1,
+    "date": "2025-07-05",
+    "tags": ["frontend", "roadmap", "web dev"]
+  },
+  {
+    "id": 113,
+    "title": "Compiler Design Short Notes",
+    "type": "notes",
+    "link": "https://example.com/compiler-notes",
+    "description": "Crisp and clear notes for compiler design concepts.",
+    "uploadedBy": "John Doe",
+    "uploadedById": 1,
+    "date": "2025-07-04",
+    "tags": ["compiler", "notes", "CS subjects"]
   }
 ],
 
@@ -214,8 +562,65 @@
     "uploadedById": 1,
     "date": "2025-07-14",
     "tags": ["engineering", "notes", "semester 1"]
+  },
+  {
+    "id": 104,
+    "title": "Python for Beginners Book",
+    "type": "book",
+    "link": "https://example.com/python-book",
+    "description": "A free beginner-friendly Python programming book.",
+    "uploadedBy": "John Doe",
+    "uploadedById": 1,
+    "date": "2025-07-13",
+    "tags": ["python", "programming", "book"]
+  },
+  {
+    "id": 105,
+    "title": "Data Structures Cheat Sheet",
+    "type": "notes",
+    "link": "https://example.com/dsa-cheatsheet",
+    "description": "Quick revision notes for important data structures.",
+    "uploadedBy": "John Doe",
+    "uploadedById": 1,
+    "date": "2025-07-12",
+    "tags": ["DSA", "cheatsheet", "revision"]
+  },
+  {
+    "id": 106,
+    "title": "Operating Systems Roadmap",
+    "type": "roadmap",
+    "link": "https://example.com/os-roadmap",
+    "description": "Step-by-step guide to mastering OS concepts.",
+    "uploadedBy": "John Doe",
+    "uploadedById": 1,
+    "date": "2025-07-11",
+    "tags": ["OS", "roadmap", "systems"]
+  },
+  {
+    "id": 107,
+    "title": "Database Schema Design Notes",
+    "type": "notes",
+    "link": "https://example.com/db-schema",
+    "description": "Helpful notes for designing efficient database schemas.",
+    "uploadedBy": "John Doe",
+    "uploadedById": 1,
+    "date": "2025-07-10",
+    "tags": ["DBMS", "notes", "database"]
+  },
+  {
+    "id": 108,
+    "title": "JavaScript Beginner Guide",
+    "type": "book",
+    "link": "https://example.com/js-guide",
+    "description": "Comprehensive beginner guide to JavaScript basics.",
+    "uploadedBy": "John Doe",
+    "uploadedById": 1,
+    "date": "2025-07-09",
+    "tags": ["javascript", "web", "frontend"]
   }
+ 
 ]
+
 
 
 }
