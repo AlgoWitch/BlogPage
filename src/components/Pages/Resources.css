@@ -21,14 +21,14 @@
     color: #555;
   }
   
-  .share-btn-container {
+  .resources-share-btn-container {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
   }
   
   /* 🌸 Pink Share Resource Button */
-  .share-resource-button {
+  .resources-share-resource-button {
     background-color: #ffb3d1;
     color: white;
     border: none;
@@ -40,18 +40,18 @@
     transition: background 0.3s ease;
   }
   
-  .share-resource-button:hover {
+  .resources-share-resource-button:hover {
     background-color: #ff94c2;
   }
   
   /* 🔍 Search Bar */
-  .search-bar-container {
+  .resources-search-bar-container {
     margin: 1.5rem auto;
     display: flex;
     justify-content: center;
   }
   
-  .search-bar-container input {
+  .resources-search-bar-container input {
     padding: 0.6rem 1rem;
     width: 70%;
     max-width: 500px;
@@ -63,14 +63,14 @@
   }
   
   /* 📌 Tab Buttons */
-  .tab-buttons {
+  .resources-tab-buttons {
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
     gap: 1rem;
   }
   
-  .tab-buttons button {
+  .resources-tab-buttons button {
     padding: 0.5rem 1.2rem;
     border: none;
     background-color: #f3e8ff;
@@ -81,22 +81,22 @@
     transition: all 0.3s ease;
   }
   
-  .tab-buttons button.active,
-  .tab-buttons button:hover {
+  .resources-tab-buttons button.active,
+  .resources-tab-buttons button:hover {
     background-color: #e0b3ff;
     border-color: #b56dda;
     color: white;
   }
   
   /* 📘 Resource Cards */
-  .resource-list {
+  .resources-resource-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 1.5rem;
     padding-top: 1rem;
   }
   
-  .resource-card {
+  .resources-resource-card {
     background-color: #fff0fb;
     border: 2px dashed #dfa9e5;
     padding: 1rem;
@@ -104,21 +104,21 @@
     transition: transform 0.2s ease;
   }
   
-  .resource-card:hover {
+  .resources-resource-card:hover {
     transform: scale(1.02);
   }
   
-  .resource-card h3 {
+  .resources-resource-card h3 {
     color: #7a4e9e;
     margin-bottom: 0.5rem;
   }
   
-  .resource-card p {
+  .resources-resource-card p {
     color: #444;
     font-size: 0.95rem;
   }
   
-  .resource-card a {
+  .resources-resource-card a {
     display: inline-block;
     margin-top: 0.5rem;
     color: #d94da6;
@@ -126,19 +126,19 @@
     text-decoration: none;
   }
   
-  .resource-card a:hover {
+  .resources-resource-card a:hover {
     text-decoration: underline;
   }
   
   /* 🔒 Login Prompt */
-  .login-message-container {
+  .resources-login-message-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 60vh;
   }
   
-  .login-message-box {
+  .resources-login-message-box {
     background-color: #fff5fd;
     border: 2px dashed #e2a4cc;
     padding: 2rem;
@@ -146,7 +146,19 @@
     border-radius: 10px;
   }
   
-  .soft-auth-btn {
+  .resources-login-message-box h3 {
+    font-size: 1.4rem;
+    color: #814fb3;
+    margin-bottom: 0.8rem;
+  }
+  
+  .resources-login-message-box p {
+    color: #6f6f6f;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .resources-soft-auth-btn {
     background-color: #ffb3d1;
     color: white;
     padding: 0.6rem 1.2rem;
@@ -158,7 +170,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .soft-auth-btn:hover {
+  .resources-soft-auth-btn:hover {
     background-color: #ff94c2;
   }
   
