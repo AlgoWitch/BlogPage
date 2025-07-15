@@ -3,13 +3,42 @@ import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../SmallerComponents/AuthContext';
 import userData from '../../data/userData.json';
 import CreatePostButton from '../SmallerComponents/CreatePostButton';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 
 function HomePage() {
   const [posts, setPosts] = useState([]);
   const { isLoggedIn } = useContext(AuthContext);
 
-  const randomGuestPosts = [/* your guest post data here */];
+  const randomGuestPosts = [
+    {
+      id: 1,
+      title: "Welcome to Scriblyn!",
+      content: "Discover voices from all corners of campus.",
+      likes: 12,
+      createdAt: "2025-04-28T10:00:00Z",
+      tags: ["introduction", "community"],
+      author: "John Doe"
+    },
+    {
+      id: 2,
+      title: "Why Journaling Helps Mental Clarity",
+      content: "A few minutes of reflection can change your day.",
+      likes: 20,
+      createdAt: "2025-04-29T14:45:00Z",
+      tags: ["mental health", "writing"],
+      author: "Jane Smith"
+    },
+    {
+      id: 3,
+      title: "Top 5 Study Playlists",
+      content: "Lofi, classical, or ambient? Here's what helps most.",
+      likes: 18,
+      createdAt: "2025-04-25T11:00:00Z",
+      tags: ["study", "music"],
+      author: "Maria Green"
+    }
+  ];
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -35,8 +64,9 @@ function HomePage() {
             Login to Write a Post
           </button>
         )}
-
+        <Link to="/Communities">
         <button>Explore Communities</button>
+        </Link>
       </div>
 
       <div className="main-feed">

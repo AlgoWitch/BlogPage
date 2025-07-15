@@ -98,6 +98,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .community-card:hover {
@@ -105,14 +106,21 @@
 }
 
 .community-card h3 {
-  margin: 0 0 0.5rem;
+  margin: 0;
   color: #703e9e;
+  font-size: 1.2rem;
 }
 
 .community-card p {
   font-size: 0.95rem;
   color: #555;
-  margin-bottom: 0.8rem;
+  margin: 0.6rem 0 1rem;
+}
+
+.community-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .visit-btn {
@@ -131,7 +139,49 @@
   background-color: #a065db;
 }
 
-/* ✨ Login message box styling */
+/* Three-dot icon */
+.three-dots-container {
+  position: relative;
+}
+
+.three-dots-icon {
+  font-size: 1.1rem;
+  color: #814fb3;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  background-color: #fff6ff;
+  border: 1px solid #d8c9f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(120, 80, 160, 0.1);
+  z-index: 99;
+  padding: 0.3rem 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #703e9e;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-menu button:hover {
+  background-color: #f3e3ff;
+}
+
+/* Login prompt styles */
 .login-message-container {
   display: flex;
   justify-content: center;

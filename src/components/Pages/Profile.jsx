@@ -3,6 +3,7 @@ import { AuthContext } from '../SmallerComponents/AuthContext';
 import userData from '../../data/userData.json';
 import CreatePostButton from '../SmallerComponents/CreatePostButton';
 import { FaEllipsisV } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './Profile.css';
 
 function ProfilePage() {
@@ -49,7 +50,10 @@ function ProfilePage() {
         <div className="login-prompt-card">
           <h2>✨ Join the Scriblyn Community</h2>
           <p>Sign up or log in to view your profile, post history, and connect with others.</p>
-          <button className="primary-btn">Login / Signup</button>
+          
+          <Link to="/login">
+            <button className="primary-btn">Login / Signup</button>
+          </Link>
         </div>
       </div>
     );
