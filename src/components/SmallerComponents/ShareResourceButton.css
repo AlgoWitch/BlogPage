@@ -1,5 +1,5 @@
 .share-resource-button {
-    background-color: #f9c4d2; /* pastel pink */
+    background-color: #f290b7;/* pastel pink */
     color: white;
     padding: 10px 16px;
     border: none;
@@ -11,7 +11,7 @@
   }
   
   .share-resource-button:hover {
-    background-color: #a678e2;
+    background-color: #bf6288;
   }
   
   .share-resource-modal {

@@ -26,7 +26,7 @@ body {
 }
 
 .hero-section button {
-  background-color: #f9c4d2;
+  background-color: #f290b7;
   color: white;
   padding: 0.8rem 1.5rem;
   margin: 1rem;
@@ -37,7 +37,7 @@ body {
 }
 
 .hero-section button:hover {
-  background-color: #dc7d9c;
+  background-color: #bf6288;
 }
 
 /* Main Feed */

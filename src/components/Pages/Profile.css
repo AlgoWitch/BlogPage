@@ -85,7 +85,9 @@
   font-weight: 500;
   transition: background 0.2s ease;
 }
-
+.profile-tabs button:hover{
+  background-color: #d9c8eb ;
+}
 .profile-tabs .active {
   background-color: #c9a0ff;
   color: white;
