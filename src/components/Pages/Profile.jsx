@@ -50,7 +50,6 @@ function ProfilePage() {
         <div className="login-prompt-card">
           <h2>✨ Join the Scriblyn Community</h2>
           <p>Sign up or log in to view your profile, post history, and connect with others.</p>
-          
           <Link to="/login">
             <button className="primary-btn">Login / Signup</button>
           </Link>

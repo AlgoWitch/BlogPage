@@ -21,7 +21,7 @@ const Signup = () => {
       await createUserWithEmailAndPassword(auth, email, password);
       navigate('/'); 
       const user = auth.currentUser;
-      console.log(user)
+      // console.log(user)
       if(user){
         await setDoc(doc(db,'Users',user.uid),{
           email: user.email,
@@ -30,7 +30,7 @@ const Signup = () => {
 
         })
       }
-      console.log("User Registered Successfully!!")
+      // console.log("User Registered Successfully!!")
       toast.success("User Registered Successfully!!",{
         position: "top-center"
       })

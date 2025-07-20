@@ -1,4 +1,4 @@
-// src/components/Pages/Messages.jsx
+
 import React, { useState,useContext } from 'react';
 import userData from '../../data/userData.json';
 import { AuthContext } from '../SmallerComponents/AuthContext';
@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 import './Messages.css';
 
 function Messages() {
-  const { isLoggedIn } = useContext(AuthContext); // Change this to false to test the logged-out view
-
+  const { isLoggedIn } = useContext(AuthContext); 
   const chats = userData.chats || [];
 
   return (
@@ -21,7 +20,7 @@ function Messages() {
         <div className="soft-auth-msg">
           <h2>Please Login or Sign up</h2>
           <p>Messages are private. Sign in to see your conversations!</p>
-          {/* <button className="soft-auth-btn">Login / Sign Up</button> */}
+          
           <Link to="/login">
              <button className="soft-auth-btn">Login / Signup</button>
           </Link>

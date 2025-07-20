@@ -5,7 +5,7 @@ const CreatePostButton = ({ onPost }) => {
   const [showModal, setShowModal] = useState(false);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [isAnonymous, setIsAnonymous] = useState(false); // ✅ Add this
+  const [isAnonymous, setIsAnonymous] = useState(false); 
 
   const handlePost = () => {
     const newPost = {

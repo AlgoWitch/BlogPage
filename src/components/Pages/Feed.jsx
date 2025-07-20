@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Feed.css';
 
 const tags = [
@@ -136,11 +135,11 @@ const Feed = () => {
           <h3>Explore Real Stories & Shared Journeys</h3>
           <div className="post-grid">
             {posts.map((post) => (
-              <Link to={`/post/${post.id}`} className="post-card" key={post.id}>
+              <div className="post-card" key={post.id}>
                 <h4>{post.title}</h4>
                 <p>{post.excerpt}</p>
                 <span>🪷{post.author}  💖 {post.likes} 🗨️{post.comments}</span>
-              </Link>
+              </div>
             ))}
           </div>
         </div>

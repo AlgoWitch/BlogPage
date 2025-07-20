@@ -1,4 +1,4 @@
-// src/components/Pages/HomePage.jsx
+
 import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../SmallerComponents/AuthContext';
 import userData from '../../data/userData.json';

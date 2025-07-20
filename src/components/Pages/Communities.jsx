@@ -1,4 +1,4 @@
-// src/components/Pages/Communities.jsx
+
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../SmallerComponents/AuthContext';
 import userData from '../../data/userData.json';
@@ -14,7 +14,7 @@ function Communities() {
   const [subscribedCommunities] = useState(userData.likedCommunities || []);
   const [showModal, setShowModal] = useState(false);
   const [editingCommunity, setEditingCommunity] = useState(null);
-  const [menuOpenId, setMenuOpenId] = useState(null); // For three-dot menu
+  const [menuOpenId, setMenuOpenId] = useState(null); 
 
   const recommendedCommunities = [
     { id: 101, name: 'Bookworms United', description: 'Share reviews, swap reads.' },

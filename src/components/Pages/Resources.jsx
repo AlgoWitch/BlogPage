@@ -1,4 +1,4 @@
-// src/components/Pages/Resources.jsx
+
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../SmallerComponents/AuthContext';
 import userData from '../../data/userData.json';
@@ -10,10 +10,10 @@ function Resources() {
   const { isLoggedIn } = useContext(AuthContext);
   const [activeTab, setActiveTab] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [sharedResources, setSharedResources] = useState(
-    userData.sharedResources?.length > 0
-      ? userData.sharedResources
-      : [
+  const [ uploadedResources, setUploadResources] = useState(userData.uploadedResources || [])
+  const savedResources = userData.savedResources || [];
+   
+  const sharedResources= [
           {
             id: 1,
             title: 'Frontend Development Guide',
@@ -50,13 +50,13 @@ function Resources() {
             link: 'https://airoadmap.tech',
           }
         ]
-  );
+  ;
   
-  const savedResources = userData.savedResources || [];
-  const uploadedResources = userData.uploadedResources || [];
+  
+  
 
   const handleNewResource = (newResource) => {
-    setSharedResources((prev) => [newResource, ...prev]);
+    setUploadResources((prev) => [newResource, ...prev]);
   };
 
   const getDisplayedResources = () => {

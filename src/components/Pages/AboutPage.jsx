@@ -1,4 +1,4 @@
-// src/components/Pages/AboutPage.jsx
+
 import React from 'react';
 import './AboutPage.css';
 
